@@ -2,7 +2,7 @@ version: 1
 
 notice: "Demonstration content based entirely on synthetic dummy data"
 timezone: "Asia/Kolkata (IST, UTC+05:30)"
-input_data_location: "Google Drive / Input Data"
+input_data_location: "Google Drive / dbt_analysis / dbt_input"
 
 jobs:
   - name: synthetic_warehouse_optimization_daily

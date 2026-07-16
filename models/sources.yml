@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: input_data
     description: >
-      Synthetic CSV inputs loaded from the Google Drive folder named Input Data.
+      Synthetic CSV inputs loaded from Google Drive under dbt_analysis/dbt_input.
       These source definitions are placeholders for demonstration only and must
       not be pointed at production warehouse objects.
     schema: synthetic_input

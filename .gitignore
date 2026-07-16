@@ -4,6 +4,6 @@ logs/
 profiles.yml
 .env
 
-# Synthetic CSV inputs live in Google Drive / Input Data, not in this repo.
+# Synthetic CSV inputs live in Google Drive / dbt_analysis / dbt_input, not in this repo.
 dbt_analysis/
-Input Data/
+dbt_input/
