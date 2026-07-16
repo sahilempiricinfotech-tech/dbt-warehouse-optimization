@@ -1,2 +1,9 @@
-dbt_analysis/
+target/
+dbt_packages/
+logs/
+profiles.yml
+.env
 
+# Synthetic CSV inputs live in Google Drive / Input Data, not in this repo.
+dbt_analysis/
+Input Data/

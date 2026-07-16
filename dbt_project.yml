@@ -1,0 +1,38 @@
+name: dbt_warehouse_optimization
+version: "1.0.0"
+config-version: 2
+
+profile: dbt_warehouse_optimization
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+snapshot-paths: ["snapshots"]
+seed-paths: ["seeds"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+vars:
+  result_classification: "Demonstration result based on synthetic dummy data"
+  input_data_folder_name: "Input Data"
+  analysis_timezone: "Asia/Kolkata (IST, UTC+05:30)"
+
+models:
+  dbt_warehouse_optimization:
+    staging:
+      +materialized: view
+      +tags: ["synthetic_input_contract"]
+    marts:
+      +materialized: table
+      +tags: ["synthetic_optimization_demo"]
+
+snapshots:
+  dbt_warehouse_optimization:
+    +target_schema: snapshots
+
+seeds:
+  dbt_warehouse_optimization:
+    +enabled: false

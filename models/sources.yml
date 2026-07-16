@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: input_data
+    description: >
+      Synthetic CSV inputs loaded from the Google Drive folder named Input Data.
+      These source definitions are placeholders for demonstration only and must
+      not be pointed at production warehouse objects.
+    schema: synthetic_input
+    tables:
+      - name: warehouse_query_log
+        description: "Synthetic warehouse query activity."
+      - name: dbt_model_rebuild_costs
+        description: "Synthetic model rebuild cost and schedule records."
+      - name: bi_dashboard_usage
+        description: "Synthetic dashboard usage records."
+      - name: dbt_run_history
+        description: "Synthetic dbt run execution history."
+      - name: protected_models_exceptions
+        description: "Synthetic protected model exception records."

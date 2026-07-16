@@ -1,0 +1,96 @@
+version: 2
+
+models:
+  - name: stg_warehouse_query_log
+    description: "Staging model for synthetic warehouse query logs."
+    columns:
+      - name: query_id
+        tests:
+          - not_null
+          - unique
+      - name: model_id
+        tests:
+          - not_null
+      - name: data_classification
+        tests:
+          - accepted_values:
+              values: ["SYNTHETIC_DUMMY_DATA"]
+
+  - name: stg_dbt_model_rebuild_costs
+    description: "Staging model for synthetic rebuild cost records."
+    columns:
+      - name: cost_record_id
+        tests:
+          - not_null
+          - unique
+      - name: model_id
+        tests:
+          - not_null
+      - name: data_classification
+        tests:
+          - accepted_values:
+              values: ["SYNTHETIC_DUMMY_DATA"]
+
+  - name: stg_bi_dashboard_usage
+    description: "Staging model for synthetic dashboard usage records."
+    columns:
+      - name: dashboard_id
+        tests:
+          - not_null
+      - name: model_id
+        tests:
+          - not_null
+      - name: data_classification
+        tests:
+          - accepted_values:
+              values: ["SYNTHETIC_DUMMY_DATA"]
+
+  - name: stg_dbt_run_history
+    description: "Staging model for synthetic dbt run history."
+    columns:
+      - name: run_id
+        tests:
+          - not_null
+          - unique
+      - name: model_id
+        tests:
+          - not_null
+      - name: data_classification
+        tests:
+          - accepted_values:
+              values: ["SYNTHETIC_DUMMY_DATA"]
+
+  - name: stg_protected_models_exceptions
+    description: "Staging model for synthetic protected model exceptions."
+    columns:
+      - name: exception_id
+        tests:
+          - not_null
+          - unique
+      - name: model_id
+        tests:
+          - not_null
+      - name: data_classification
+        tests:
+          - accepted_values:
+              values: ["SYNTHETIC_DUMMY_DATA"]
+
+  - name: model_usage_rollup
+    description: "Synthetic rollup of model usage, run reliability, costs, and protection boundaries."
+    columns:
+      - name: model_id
+        tests:
+          - not_null
+          - unique
+
+  - name: model_optimization_recommendations
+    description: "Demonstration recommendations based entirely on synthetic dummy data."
+    columns:
+      - name: model_id
+        tests:
+          - not_null
+          - unique
+      - name: result_classification
+        tests:
+          - accepted_values:
+              values: ["Demonstration result based on synthetic dummy data"]

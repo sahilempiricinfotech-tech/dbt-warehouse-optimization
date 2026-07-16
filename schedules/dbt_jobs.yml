@@ -1,0 +1,23 @@
+version: 1
+
+notice: "Demonstration content based entirely on synthetic dummy data"
+timezone: "Asia/Kolkata (IST, UTC+05:30)"
+input_data_location: "Google Drive / Input Data"
+
+jobs:
+  - name: synthetic_warehouse_optimization_daily
+    description: >
+      Demonstration dbt job for synthetic warehouse optimization analysis.
+      This job must not connect to production systems or production datasets.
+    schedule_expression_ist: "cron: 30 6 * * * Asia/Kolkata (IST)"
+    commands:
+      - "dbt deps"
+      - "dbt run --select staging marts"
+      - "dbt test --select staging marts"
+
+  - name: synthetic_warehouse_optimization_weekly_snapshot
+    description: >
+      Demonstration weekly snapshot job for protected-model exception records.
+    schedule_expression_ist: "cron: 0 7 * * 1 Asia/Kolkata (IST)"
+    commands:
+      - "dbt snapshot --select protected_models_exceptions_snapshot"
