@@ -45,8 +45,8 @@ dbt_analysis/
 
 Drive folders:
 
-- dbt_analysis: https://drive.google.com/drive/folders/1tT-8g3yj9kY5mgm14LU0s_D7jX9fdlyI
-- dbt_input: https://drive.google.com/drive/folders/18L3lDrhZBDDYVuKFXfazFVuHbODxGhso
+- dbt_analysis: https://drive.google.com/drive/folders/1tX-zzyMOKD_sIfZ1JJmv_MYc3gsys2KV
+- dbt_input: https://drive.google.com/drive/folders/1qkiJOmTY8osk90PI0LeIaOSNBAggkwTb
 
 ## Synthetic Data Boundary
 
